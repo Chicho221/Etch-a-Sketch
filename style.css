@@ -1,8 +1,27 @@
+/*
+}*/
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-height: 100vh;
+}
+
+p{
+    margin: 0;
+}
+
 #container{
     display: flex;
+    flex-shrink: 0;
     flex-wrap: wrap;
     width: 600px;
     height: 600px;
+    background-color: white;
+    border: 5px solid rgb(137, 217, 243);
+    border-radius: 5px;
 }
 
 .gridSquere{
@@ -10,3 +29,103 @@
     border: 1px solid black;
 }
 
+
+
+/*Header*/
+
+#header{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    height: 30%;
+    background-color: rgb(122, 210, 236);
+    font-size: 100px;
+    color: white;
+}
+
+#title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Yellowtail', cursive;
+    margin-top: 20px;
+}
+
+#title:hover{
+    cursor: default;
+}
+#menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+#menu button{
+    text-decoration: none;
+    background-color: rgb(211, 238, 247);
+    border: 3px solid rgb(137, 217, 243);
+    border-radius: 7px;
+    padding: 3px 30px;
+    font-size: 30px;
+    color: white;
+    font-family: 'Yellowtail', cursive;
+}
+
+#menu button:hover{
+    background-color: white;
+    color: rgb(137, 217, 243);
+    cursor: pointer;
+}
+
+/*Contentrgb(186, 231, 245)*/
+
+#content{
+    background: linear-gradient(to bottom,rgb(122, 210, 236) 0%,
+                                          rgb(122, 210, 236) 5%,
+                                          rgb(255, 255, 255) 60%,
+                                          rgb(255, 255, 255) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Footer*/
+
+#footer{
+
+    margin-top: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+}
+
+#footer a:hover{
+    color: rgb(211, 238, 247);
+}
+
+#footer p{
+    font-family: 'Yellowtail', cursive;
+    text-decoration: none;
+    color: rgb(122, 210, 236);
+    font-size: 32px;
+    padding-bottom: 15px;
+}
+
+#footer img{
+    width: 42px;
+    height: 42px;
+    padding: 50px 0px 15px 15px;
+}
+
+.author{
+    font-family: 'Yellowtail', cursive;
+    text-decoration: none;
+    color: rgb(122, 210, 236);
+    font-size: 32px;
+    padding-left: 5px;
+    padding-bottom: 15px;
+}
