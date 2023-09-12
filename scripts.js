@@ -49,7 +49,7 @@ function drawMouseover(){
     for(i = 0;i < gridSize * gridSize; i++){
         gridSquere[i].addEventListener('mouseover',(event) =>{
             if(colorDraw == false){
-            event.target.style.backgroundColor = 'black';
+            event.target.style.backgroundColor = 'rgb(122, 210, 236)';
             } else{
                 randomRgbColor();
             event.target.style.backgroundColor = `rgb(${colorDraw[0]},${colorDraw[1]},${colorDraw[2]})`;
