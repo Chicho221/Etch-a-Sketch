@@ -1,0 +1,16 @@
+#container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    height: 600px;
+}
+
+.gridSquere{
+    box-sizing: border-box;
+    background-color: aliceblue;
+    border: 1px solid black;
+}
+
+.gridSquere:hover{
+    background-color: blue;
+}
