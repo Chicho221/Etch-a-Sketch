@@ -4,12 +4,19 @@ let gridSize = DEFAULT_SIZE;
 const container = document.querySelector('#container');
 let changeValue = document.querySelector('#changeSize');
 
-changeValue.addEventListener('click',() =>{
-    
+changeValue.addEventListener('click',() =>{   
     changeValue = prompt('Enter amount of squeres per side (max:100):');
     gridSize = parseInt(changeValue);
-    reset();
-    createGrid(gridSize);
+        if(isNaN(gridSize)){
+            alert('That\'s not a number.');
+        }else if(gridSize > 100){
+            alert('That\'s too many squeres.');
+        }else if(gridSize < 0){
+            alert('This number is negative.')
+        }else{
+            resetGrid();
+            createGrid(gridSize);
+        }  
 });
 
 function createGrid(){
@@ -28,10 +35,11 @@ function createGrid(){
     }  
 }
 
-window.onload = createGrid();
-
-function reset() {
+function resetGrid() {
     while (container.firstChild) {
       container.removeChild(container.lastChild);
     }
 }
+
+window.onload = createGrid();
+
