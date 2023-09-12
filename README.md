@@ -1,5 +1,5 @@
 # Etch-a-Sketch
-Features:
--Clear grid
--Sizing grid (max. 100)
--Rainbow pen
+Features:__
+-Clear grid__
+-Sizing grid (max. 100)__
+-Rainbow pen__
