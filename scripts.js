@@ -2,6 +2,8 @@ const DEFAULT_SIZE = 16; //Default size of a grid
 
 let gridSize = DEFAULT_SIZE;
 const container = document.querySelector('#container');
+const rainbowBtn = document.querySelector('#rainbow');
+const clearBtn = document.querySelector('#clear');
 let changeValue = document.querySelector('#changeSize');
 
 changeValue.addEventListener('click',() =>{   
@@ -18,6 +20,17 @@ changeValue.addEventListener('click',() =>{
             createGrid(gridSize);
         }  
 });
+clearBtn.addEventListener('click',() =>{
+    resetGrid();
+    createGrid();
+});
+
+function randomColor(){ //Generates random number to 255
+    let randomColor = Math.floor(Math.random()*255);
+    gridSquere.addEventListener('mouseover',() =>{ //On hover changes background color to random color
+    gridSquere.style.cssText += `background-color: ${randomColor}, ${randomColor}, ${randomColor};`;
+    });
+}
 
 function createGrid(){
     for(let i = 0; i < gridSize ** 2; i++){ //Creates squeres to fill board
@@ -26,11 +39,9 @@ function createGrid(){
         const gridSquere = document.createElement('div');
         gridSquere.classList.add('gridSquere');
         gridSquere.style.cssText = `width:${squereWidth}; height:${squereHeight};`;
-        
-        gridSquere.addEventListener('mouseover',() =>{ //On hover changes background color
-            gridSquere.style.cssText += 'background-color: blue';
+        gridSquere.addEventListener('mouseover',() =>{ //On hover changes background color to blue
+        gridSquere.style.cssText += `background-color: blue;`;
         });
-        
         container.appendChild(gridSquere);
     }  
 }
@@ -40,6 +51,8 @@ function resetGrid() {
       container.removeChild(container.lastChild);
     }
 }
+
+
 
 window.onload = createGrid();
 
